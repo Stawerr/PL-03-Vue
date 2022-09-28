@@ -1,5 +1,7 @@
 <template>
-    <ListUser v-for="(user, i) of users" :user="user" :key="i"></ListUser>
+    <div class="grid-container">
+        <ListUser v-for="(user, i) of users" :user="user" :key="i"></ListUser>
+    </div>
 </template>
 
 <script>
@@ -26,5 +28,10 @@ import ListUser from './listUser.vue';
 </script>
 
 <style scoped>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
 
 </style>

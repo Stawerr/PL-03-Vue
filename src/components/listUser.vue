@@ -1,11 +1,11 @@
 <template>
-   <div class="card">
-        <img :src="user.picture?.large" alt="Avatar" style="width:100%">
-        <div class="container">
+
+        <div class="card grid-item">
+            <img :src="user.picture?.large" alt="Avatar" style="width:100%">
             <h4><b>{{user.name?.first}} {{user.name?.last}}</b></h4> 
             <p>{{user.location?.country}}</p> 
         </div>
-    </div>
+
 </template>
 
 <script>
@@ -19,11 +19,15 @@ export default {
 </script>
 
 <style scoped>
+
+.grid-item {
+  text-align: center;
+}
 .card {
     margin-top: 40px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -33,6 +37,6 @@ export default {
 }
 
 .container {
-    padding: 2px 12px;
+   
 }
 </style>
